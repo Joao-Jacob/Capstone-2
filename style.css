@@ -1,0 +1,168 @@
+/* === Base === */
+body {
+  background-color: #222831;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  color: #DFD0B8;
+}
+
+p {
+  color: #948979;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #1b1f27;
+}
+
+.navbar-toggler {
+  border-color: #DFD0B8;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(223,208,184)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-brand img {
+  height: 100px;
+}
+
+.nav-pills a,
+.nav-pills a:visited {
+  color: #DFD0B8;
+}
+
+.nav-pills .nav-link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #DFD0B8;
+  border-radius: 0;
+}
+
+/* === Skills Bars === */
+.bar {
+  background-color: #EEE;
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.bar::before {
+  content: attr(data-skill);
+  background-color: #DFD0B8;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+}
+
+.bar.front::before {
+  background-color: #393E46;
+}
+
+.bar.back::before {
+  background-color: #948979;
+}
+
+.bar.learning::before {
+  width: calc(20% - 10px);
+}
+
+.bar.basic::before {
+  width: calc(40% - 10px);
+}
+
+.bar.intermediate::before {
+  width: calc(60% - 10px);
+}
+
+.bar.advanced::before {
+  width: calc(80% - 10px);
+}
+
+.bar.expert::before {
+  width: calc(100% - 10px);
+}
+
+/* === Carousel === */
+.h1f {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carousel {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 0;
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* === Keyframes === */
+@keyframes load {
+  from {
+    width: 0%;
+  }
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p,
+  p.lead {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .h1f {
+    font-size: 1.5rem;
+  }
+
+  .carousel-inner img {
+    max-height: 300px;
+  }
+
+  .navbar-brand img {
+    height: 60px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    padding-top: 10px;
+  }
+}
